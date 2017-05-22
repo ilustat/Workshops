@@ -105,7 +105,7 @@ Using the `mutate()` function from `dplyr` create the following two variables:
   - % Men in Parliament (Mip.pct) as: 100 - % Females in Parliament
   - Male to female ratio as: (% Men in Parliament) divided by (% Females in Parliament)
 
-```{r dplyr_select}
+```{r dplyr_mutate}
 # % Men in Parliament (Mip.pct)
 WiP_m1 <- mutate(WiP_Tidy, Mip.pct = 100 - Fip.pct)
 glimpse(WiP_m1)
@@ -176,7 +176,7 @@ We will use the pipe operator `%>%` to do multiple steps.
 Create `WiP_p1` as:
 
   1. Keep the observations for Countries "Cuba", "Peru" and "Brazil"
-  2. then keep the variables `Country_Name`, `Year` and `Fip:pct`
+  2. then keep the variables `Country_Name`, `Year` and `Fip.pct`
   3. then rename `Country_Name` to `Country`
   4. then create variable % Males in Parliament (Mip.pct)
   5. then arrange the data by Country, descending Year
@@ -199,7 +199,7 @@ WiP_p1
 
 Create `WiP_TD` as:
 
-  1. Keep the variables `Country_Name`, `Year` and `Fip:pct`
+  1. Keep the variables `Country_Name`, `Year` and `Fip.pct`
   2. then rename `Country_Name` to `Country`
   3. then create variable % Males in Parliament (Mip.pct)
   4. then the male to female ratio (MF_ratio)
